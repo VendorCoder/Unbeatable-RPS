@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Gradient background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #2c3e50;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Gradient button */
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #2980b9, #1c6ea4); /* Darker gradient on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #e74c3c;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #e74c3c;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    animation: none; /* Default state */
+}

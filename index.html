@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unbeatable Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inline CSS for the zoom animation */
+        @keyframes zoomEffect {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        #result {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #e74c3c;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            animation: none; /* Default state */
+        }
+    </style>
+</head>
+<body>
+    <h1>Unbeatable Rock Paper Scissors</h1>
+    <p>Choose your move:</p>
+    <button onclick="playGame('rock 🪨')">Rock 🪨</button>
+    <button onclick="playGame('paper 📃')">Paper 📃</button>
+    <button onclick="playGame('scissors ✂️')">Scissors ✂️</button>
+    <p id="result"></p>
+
+    <script>
+        function playGame(playerMove) {
+            let computerMove;
+
+            // Determine the computer's move to always win
+            if (playerMove === 'rock 🪨') {
+                computerMove = 'paper 📃';
+            } else if (playerMove === 'paper 📃') {
+                computerMove = 'scissors ✂️';
+            } else if (playerMove === 'scissors ✂️') {
+                computerMove = 'rock 🪨';
+            }
+
+            // Display dramatic effect
+            const resultElement = document.getElementById('result');
+            resultElement.innerText = "The computer has chosen... 🤔";
+            resultElement.style.animation = "none"; // Reset animation
+
+            setTimeout(() => {
+                resultElement.innerText = 
+                    `You chose ${playerMove}. Computer chose ${computerMove}. 😈 You lose this round!`;
+                resultElement.style.animation = "zoomEffect 0.5s ease-in-out"; // Trigger zoom animation
+            }, 2000); // 2-second delay
+        }
+    </script>
+</body>
+</html>
